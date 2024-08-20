@@ -37,7 +37,9 @@ tool_descriptions = tool_descriptions_tmp
 batch_size = 32
 tool_embeddings = []
 for i in range(0, len(tool_descriptions), batch_size):
-    tool_embeddings.extend(model.embed_docs(tool_descriptions[i : i + batch_size]).detach().cpu())
+    tool_embeddings.extend(
+        model.embed_docs(tool_descriptions[i : i + batch_size]).detach().cpu()
+    )
 
 tool_embeddings = torch.vstack(tool_embeddings)
 

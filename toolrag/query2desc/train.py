@@ -9,6 +9,7 @@ from transformers import AutoModel, AutoTokenizer
 from toolrag.tool_reranker.utils import set_seed
 import wandb
 
+
 def average_pool(
     last_hidden_states: torch.Tensor, attention_mask: torch.Tensor
 ) -> torch.Tensor:
@@ -42,7 +43,6 @@ def train(args):
     optimizer = AdamW(model.parameters(), lr=args.lr, weight_decay=args.wd)
     total_steps = len(dataloader) * args.epochs
     lr_scheduler = CosineAnnealingLR(optimizer, T_max=total_steps)
-
 
     # Training loop
     num_epochs = args.epochs
@@ -78,7 +78,10 @@ def train(args):
             )
 
             loss = torch.nn.functional.triplet_margin_loss(
-                anchor_embeddings, positive_embeddings, negative_embeddings, margin=args.margin
+                anchor_embeddings,
+                positive_embeddings,
+                negative_embeddings,
+                margin=args.margin,
             )
 
             # Update learning rate
@@ -121,6 +124,7 @@ def train(args):
                 print(f"Checkpoint saved at {checkpoint_path}")
 
     print("Training complete")
+
 
 def parse_args():
     parser = argparse.ArgumentParser()

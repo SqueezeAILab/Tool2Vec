@@ -1,7 +1,5 @@
 import argparse
 import os
-import subprocess
-import re
 
 import torch
 import tqdm
@@ -122,7 +120,6 @@ def train(args):
                     },
                     checkpoint_path,
                 )
-
 
 
 def parse_args():

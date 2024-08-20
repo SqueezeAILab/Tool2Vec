@@ -28,7 +28,6 @@ import time
 from pathlib import Path
 from typing import Any, Callable, Collection, Optional, Type, TypeVar
 
-from pkg_resources import require
 
 from openai import AzureOpenAI
 from tqdm import tqdm

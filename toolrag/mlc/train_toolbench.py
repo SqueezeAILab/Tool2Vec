@@ -14,6 +14,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import wandb
 from toolrag.tool_reranker.utils import set_seed
 
+
 class ToolBenchMLCDataset(torch.utils.data.Dataset):
     def __init__(
         self,

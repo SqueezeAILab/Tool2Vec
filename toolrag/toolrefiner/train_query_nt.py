@@ -398,8 +398,7 @@ def train(args):
 
             if ((i + 1) % iters_to_accumulate == 0) or (
                 # Handle the last set of batches if they don't perfectly divide by the accumulation number
-                i == len(train_loader) - 1
-                and (i + 1) % iters_to_accumulate != 0
+                i == len(train_loader) - 1 and (i + 1) % iters_to_accumulate != 0
             ):
                 # Update learning rate
                 if current_step < num_linear_warmup_steps:

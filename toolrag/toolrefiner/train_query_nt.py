@@ -32,9 +32,6 @@ class T2VPretrainedReranker(nn.Module):
     def __init__(
         self, model_name, std=0.2, num_layer_to_freeze=0, use_cls=False, use_sep=False
     ):
-    def __init__(
-        self, model_name, std=0.2, num_layer_to_freeze=0, use_cls=False, use_sep=False
-    ):
         super().__init__()
         self.use_cls = use_cls
         self.use_sep = use_sep

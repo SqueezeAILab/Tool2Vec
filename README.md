@@ -19,6 +19,20 @@ cd ToolRAG
 pip install -e .
 pip install -r requirements.txt
 ```
+---
+
+## Download ToolBank Dataset
+1. Install HuggingFace `datasets` package
+```
+pip install datasets
+```
+
+2. Load the dataset from HuggingFace
+```python
+from datasets import load_dataset
+
+tool_bank = load_dataset("squeeze-ai-lab/ToolBank")
+```
 
 ---
 ## Basic Runs

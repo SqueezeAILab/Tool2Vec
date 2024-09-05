@@ -61,3 +61,14 @@ Refer to `toolrag/mlc/README.md` for more details [here](toolrag/mlc/README.md).
 Refer to `toolrag/toolrefiner/README.md` for more details [here](toolrag/toolrefiner/README.md).
 
 ## Citation
+```
+@misc{moon2024efficient,
+      title={Efficient and Scalable Estimation of Tool Representations in Vector Space}, 
+      author={Suhong Moon and Siddharth Jha and Lutfi Eren Erdogan and Sehoon Kim and Woosang Lim and Kurt Keutzer and Amir Gholami},
+      year={2024},
+      eprint={2409.02141},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2409.02141}, 
+}
+```
